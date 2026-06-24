@@ -1,0 +1,1050 @@
+JIT-compiling custom LU extension (dtype=complex128)...
+[W602 05:59:18.631029627 Context.cpp:444] Warning: torch.backends.cuda.preferred_linalg_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
+[W602 05:59:18.631081670 Context.cpp:422] Warning: The usage of MAGMA backend for linear algebra operations is deprecated and will be removed in future releases. cuSOLVER stays as the default backend.If you see any error messages with cuSOLVER but not MAGMA, please, file an issue on GitHub. (function operator())
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+==========================================================================Done.
+
+Testing shape=(16, 16)
+Testing shape=(24, 24)
+Testing shape=(32, 32)
+Testing shape=(48, 48)
+Testing shape=(64, 64)
+Testing shape=(96, 96)
+Testing shape=(128, 128)
+Testing shape=(192, 192)
+Testing shape=(256, 256)
+Testing shape=(384, 384)
+Testing shape=(512, 512)
+Testing shape=(768, 768)
+Testing shape=(1024, 1024)
+Testing shape=(1536, 1536)
+Testing shape=(2048, 2048)
+Testing shape=(3072, 3072)
+Testing shape=(4096, 4096)
+Testing shape=(6144, 6144)
+Testing shape=(8192, 8192)
+Testing shape=(2, 16, 16)
+Testing shape=(2, 24, 24)
+Testing shape=(2, 32, 32)
+Testing shape=(2, 48, 48)
+Testing shape=(2, 64, 64)
+Testing shape=(2, 96, 96)
+Testing shape=(2, 128, 128)
+Testing shape=(2, 192, 192)
+Testing shape=(2, 256, 256)
+Testing shape=(2, 384, 384)
+Testing shape=(2, 512, 512)
+Testing shape=(2, 768, 768)
+Testing shape=(2, 1024, 1024)
+Testing shape=(2, 1536, 1536)
+Testing shape=(2, 2048, 2048)
+Testing shape=(2, 3072, 3072)
+Testing shape=(2, 4096, 4096)
+Testing shape=(2, 6144, 6144)
+Testing shape=(2, 8192, 8192)
+Testing shape=(4, 16, 16)
+Testing shape=(4, 24, 24)
+Testing shape=(4, 32, 32)
+Testing shape=(4, 48, 48)
+Testing shape=(4, 64, 64)
+Testing shape=(4, 96, 96)
+Testing shape=(4, 128, 128)
+Testing shape=(4, 192, 192)
+Testing shape=(4, 256, 256)
+Testing shape=(4, 384, 384)
+Testing shape=(4, 512, 512)
+Testing shape=(4, 768, 768)
+Testing shape=(4, 1024, 1024)
+Testing shape=(4, 1536, 1536)
+Testing shape=(4, 2048, 2048)
+Testing shape=(4, 3072, 3072)
+Testing shape=(4, 4096, 4096)
+Testing shape=(4, 6144, 6144)
+Testing shape=(4, 8192, 8192)
+Testing shape=(8, 16, 16)
+Testing shape=(8, 24, 24)
+Testing shape=(8, 32, 32)
+Testing shape=(8, 48, 48)
+Testing shape=(8, 64, 64)
+Testing shape=(8, 96, 96)
+Testing shape=(8, 128, 128)
+Testing shape=(8, 192, 192)
+Testing shape=(8, 256, 256)
+Testing shape=(8, 384, 384)
+Testing shape=(8, 512, 512)
+Testing shape=(8, 768, 768)
+Testing shape=(8, 1024, 1024)
+Testing shape=(8, 1536, 1536)
+Testing shape=(8, 2048, 2048)
+Testing shape=(8, 3072, 3072)
+Testing shape=(8, 4096, 4096)
+Testing shape=(8, 6144, 6144)
+Testing shape=(8, 8192, 8192)
+Testing shape=(16, 16, 16)
+Testing shape=(16, 24, 24)
+Testing shape=(16, 32, 32)
+Testing shape=(16, 48, 48)
+Testing shape=(16, 64, 64)
+Testing shape=(16, 96, 96)
+Testing shape=(16, 128, 128)
+Testing shape=(16, 192, 192)
+Testing shape=(16, 256, 256)
+Testing shape=(16, 384, 384)
+Testing shape=(16, 512, 512)
+Testing shape=(16, 768, 768)
+Testing shape=(16, 1024, 1024)
+Testing shape=(16, 1536, 1536)
+Testing shape=(16, 2048, 2048)
+Testing shape=(16, 3072, 3072)
+Testing shape=(16, 4096, 4096)
+Testing shape=(16, 6144, 6144)
+Testing shape=(16, 8192, 8192)
+Testing shape=(32, 16, 16)
+Testing shape=(32, 24, 24)
+Testing shape=(32, 32, 32)
+Testing shape=(32, 48, 48)
+Testing shape=(32, 64, 64)
+Testing shape=(32, 96, 96)
+Testing shape=(32, 128, 128)
+Testing shape=(32, 192, 192)
+Testing shape=(32, 256, 256)
+Testing shape=(32, 384, 384)
+Testing shape=(32, 512, 512)
+Testing shape=(32, 768, 768)
+Testing shape=(32, 1024, 1024)
+Testing shape=(32, 1536, 1536)
+Testing shape=(32, 2048, 2048)
+Testing shape=(32, 3072, 3072)
+Testing shape=(32, 4096, 4096)
+Testing shape=(32, 6144, 6144)
+Skipping shape=(32, 8192, 8192) (would need 32.0 GiB, GPU has 79 GiB)
+Testing shape=(64, 16, 16)
+Testing shape=(64, 24, 24)
+Testing shape=(64, 32, 32)
+Testing shape=(64, 48, 48)
+Testing shape=(64, 64, 64)
+Testing shape=(64, 96, 96)
+Testing shape=(64, 128, 128)
+Testing shape=(64, 192, 192)
+Testing shape=(64, 256, 256)
+Testing shape=(64, 384, 384)
+Testing shape=(64, 512, 512)
+Testing shape=(64, 768, 768)
+Testing shape=(64, 1024, 1024)
+Testing shape=(64, 1536, 1536)
+Testing shape=(64, 2048, 2048)
+Testing shape=(64, 3072, 3072)
+Testing shape=(64, 4096, 4096)
+Skipping shape=(64, 6144, 6144) (would need 36.0 GiB, GPU has 79 GiB)
+Skipping shape=(64, 8192, 8192) (would need 64.0 GiB, GPU has 79 GiB)
+[------------------- lu_factor (complex128) -------------------]
+                        |    magma    |   cusolver  |    custom 
+1 threads: -----------------------------------------------------
+      (16, 16)          |      100.3  |       83.4  |      132.9
+      (24, 24)          |      103.2  |       92.5  |      155.8
+      (32, 32)          |       94.6  |      100.9  |      192.5
+      (48, 48)          |      117.0  |      131.5  |      244.4
+      (64, 64)          |      146.8  |      158.2  |      372.0
+      (96, 96)          |      224.0  |      223.9  |      591.8
+      (128, 128)        |      367.7  |      284.7  |      800.5
+      (192, 192)        |      747.6  |      446.0  |     1284.2
+      (256, 256)        |     1554.5  |      584.2  |     1808.6
+      (384, 384)        |     2044.6  |     1088.4  |     3014.8
+      (512, 512)        |     2839.8  |     1505.2  |     4287.8
+      (768, 768)        |     4849.2  |     2684.6  |     7130.9
+      (1024, 1024)      |     8983.0  |     3840.3  |    11083.4
+      (1536, 1536)      |    15824.7  |     7089.1  |    18727.2
+      (2048, 2048)      |    26666.3  |    10475.5  |    27885.7
+      (3072, 3072)      |    56792.3  |    19375.7  |    50750.6
+      (4096, 4096)      |   193691.2  |    33014.7  |    81612.5
+      (6144, 6144)      |   417035.2  |    80453.1  |   170198.3
+      (8192, 8192)      |  1249040.9  |   159531.5  |   313381.4
+      (2, 16, 16)       |       64.9  |       63.7  |      118.0
+      (2, 24, 24)       |       79.1  |       80.3  |      136.4
+      (2, 32, 32)       |       94.3  |       96.5  |      198.5
+      (2, 48, 48)       |      435.9  |      144.4  |      248.5
+      (2, 64, 64)       |      488.6  |      195.6  |      379.9
+      (2, 96, 96)       |      811.4  |      350.9  |      609.2
+      (2, 128, 128)     |     1197.6  |      588.6  |      820.2
+      (2, 192, 192)     |     1923.3  |     1440.5  |     1310.8
+      (2, 256, 256)     |     2658.7  |     2797.2  |     1865.9
+      (2, 384, 384)     |     6142.9  |     8393.7  |     3121.2
+      (2, 512, 512)     |     9706.3  |     2981.6  |     4428.8
+      (2, 768, 768)     |    17123.3  |     5337.5  |     7442.1
+      (2, 1024, 1024)   |    25000.4  |     7635.6  |    11901.6
+      (2, 1536, 1536)   |    43706.6  |    14201.1  |    20585.6
+      (2, 2048, 2048)   |    63543.6  |    20932.7  |    30826.1
+      (2, 3072, 3072)   |   110610.2  |    38774.2  |    58174.5
+      (2, 4096, 4096)   |   167672.3  |    65821.1  |    97908.7
+      (2, 6144, 6144)   |   338939.5  |   160907.1  |   232312.5
+      (2, 8192, 8192)   |   612410.9  |   320803.0  |   459275.5
+      (4, 16, 16)       |       66.9  |       64.0  |      120.7
+      (4, 24, 24)       |       79.6  |       80.5  |      139.6
+      (4, 32, 32)       |       95.0  |       97.1  |      202.1
+      (4, 48, 48)       |      449.3  |      145.4  |      257.6
+      (4, 64, 64)       |      506.1  |      195.2  |      394.6
+      (4, 96, 96)       |      838.3  |      350.7  |      632.0
+      (4, 128, 128)     |     1239.7  |      588.4  |      853.4
+      (4, 192, 192)     |     1997.6  |     1449.1  |     1369.6
+      (4, 256, 256)     |     2769.5  |     2822.1  |     1935.1
+      (4, 384, 384)     |     6470.3  |     8430.9  |     3244.6
+      (4, 512, 512)     |    10242.3  |     5917.8  |     4649.4
+      (4, 768, 768)     |    18211.6  |    10643.4  |     8173.6
+      (4, 1024, 1024)   |    26833.5  |    15215.0  |    13057.6
+      (4, 1536, 1536)   |    47866.4  |    28325.5  |    23035.3
+      (4, 2048, 2048)   |    71634.0  |    41762.2  |    35543.2
+      (4, 3072, 3072)   |   131488.4  |    77314.9  |    74160.8
+      (4, 4096, 4096)   |   217381.9  |   132305.8  |   137425.0
+      (4, 6144, 6144)   |   501148.2  |   320642.7  |   364579.2
+      (4, 8192, 8192)   |   986889.0  |   649299.3  |   771451.9
+      (8, 16, 16)       |       67.1  |       64.0  |      120.8
+      (8, 24, 24)       |       79.3  |       80.3  |      139.9
+      (8, 32, 32)       |       95.0  |       96.8  |      204.3
+      (8, 48, 48)       |      450.9  |      145.2  |      256.7
+      (8, 64, 64)       |      507.1  |      196.2  |      400.9
+      (8, 96, 96)       |      844.4  |      351.1  |      636.4
+      (8, 128, 128)     |     1249.6  |      588.7  |      860.8
+      (8, 192, 192)     |     2036.3  |     1450.4  |     1389.4
+      (8, 256, 256)     |     2830.2  |     2781.3  |     1967.3
+      (8, 384, 384)     |     6638.0  |     8642.6  |     3362.1
+      (8, 512, 512)     |    10585.9  |    11830.0  |     5018.3
+      (8, 768, 768)     |    19228.5  |    21272.7  |     9070.6
+      (8, 1024, 1024)   |    29250.0  |    30362.2  |    14417.5
+      (8, 1536, 1536)   |    53607.9  |    56428.8  |    27005.8
+      (8, 2048, 2048)   |    84024.4  |    83383.7  |    45967.1
+      (8, 3072, 3072)   |   173744.7  |   153597.9  |   111133.5
+      (8, 4096, 4096)   |   317341.6  |   263956.7  |   223095.8
+      (8, 6144, 6144)   |   820491.3  |   649723.4  |   632485.5
+      (8, 8192, 8192)   |  1734906.6  |  1296061.5  |  1391629.1
+      (16, 16, 16)      |       67.3  |       63.6  |      121.5
+      (16, 24, 24)      |       79.8  |       80.5  |      141.1
+      (16, 32, 32)      |       95.2  |       97.2  |      206.2
+      (16, 48, 48)      |      459.2  |      146.1  |      258.9
+      (16, 64, 64)      |      515.9  |      199.3  |      405.2
+      (16, 96, 96)      |      859.9  |      352.0  |      646.8
+      (16, 128, 128)    |     1284.2  |      597.2  |      882.3
+      (16, 192, 192)    |     2100.1  |     1466.6  |     1429.3
+      (16, 256, 256)    |     2972.9  |     2861.2  |     2064.7
+      (16, 384, 384)    |     7081.4  |    10084.2  |     3750.3
+      (16, 512, 512)    |    11466.1  |    23551.4  |     5628.9
+      (16, 768, 768)    |    21182.5  |    42321.4  |    10577.1
+      (16, 1024, 1024)  |    32985.6  |    60667.7  |    17559.4
+      (16, 1536, 1536)  |    65580.3  |   112839.8  |    38248.9
+      (16, 2048, 2048)  |   111348.9  |   166591.5  |    71598.9
+      (16, 3072, 3072)  |   264844.3  |   311075.5  |   188552.5
+      (16, 4096, 4096)  |   522313.5  |   534885.3  |   395873.2
+      (16, 6144, 6144)  |  1462465.2  |  1305985.5  |  1195413.8
+      (16, 8192, 8192)  |  3245742.7  |  2597307.5  |  2671581.1
+      (32, 16, 16)      |       68.6  |       66.5  |      130.8
+      (32, 24, 24)      |       82.9  |       80.3  |      142.2
+      (32, 32, 32)      |       96.1  |       98.5  |      208.8
+      (32, 48, 48)      |      465.9  |      146.1  |      262.0
+      (32, 64, 64)      |      526.9  |      203.1  |      409.5
+      (32, 96, 96)      |      879.6  |      351.7  |      659.8
+      (32, 128, 128)    |     1316.8  |      597.3  |      899.7
+      (32, 192, 192)    |     2219.0  |     1538.7  |     1524.0
+      (32, 256, 256)    |     3218.6  |     3218.4  |     2302.0
+      (32, 384, 384)    |     7732.1  |    11967.8  |     4298.2
+      (32, 512, 512)    |    12789.5  |    47209.1  |     6729.9
+      (32, 768, 768)    |    25130.9  |    84791.5  |    14493.2
+      (32, 1024, 1024)  |    40928.6  |   121637.6  |    25938.7
+      (32, 1536, 1536)  |    91332.3  |   226567.1  |    62863.4
+      (32, 2048, 2048)  |   170634.2  |   336253.0  |   125026.8
+      (32, 3072, 3072)  |   439403.4  |   623732.9  |   349451.6
+      (32, 4096, 4096)  |   911030.9  |  1070367.3  |   758613.6
+      (32, 6144, 6144)  |  2754228.4  |  2617565.2  |  2344438.5
+      (64, 16, 16)      |       68.1  |       63.9  |      122.5
+      (64, 24, 24)      |       81.3  |       80.3  |      141.2
+      (64, 32, 32)      |       97.4  |       97.5  |      208.7
+      (64, 48, 48)      |      480.8  |      145.6  |      264.9
+      (64, 64, 64)      |      527.7  |      202.9  |      415.7
+      (64, 96, 96)      |      903.1  |      359.2  |      671.7
+      (64, 128, 128)    |     1381.8  |      637.1  |      965.6
+      (64, 192, 192)    |     2406.6  |     1827.8  |     1750.8
+      (64, 256, 256)    |     3604.8  |     3899.9  |     2719.6
+      (64, 384, 384)    |     8899.4  |    13217.1  |     5579.5
+      (64, 512, 512)    |    15203.5  |    94632.3  |     9884.4
+      (64, 768, 768)    |    32327.0  |   170331.6  |    23805.8
+      (64, 1024, 1024)  |    57021.4  |   243197.6  |    43852.0
+      (64, 1536, 1536)  |   141356.4  |   453039.3  |   115573.8
+      (64, 2048, 2048)  |   283506.9  |   671852.3  |   240999.2
+      (64, 3072, 3072)  |   791349.8  |  1253514.1  |   697677.1
+      (64, 4096, 4096)  |  1725463.0  |  2185753.0  |  1575915.3
+
+Times are in microseconds (us).
+
+===============
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
