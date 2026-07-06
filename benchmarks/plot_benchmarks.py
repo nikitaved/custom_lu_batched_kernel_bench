@@ -1,16 +1,19 @@
 """
-Generate line plots from LU benchmark results.
+Generate comparison plots: custom (new cusolver) vs cusolver (old) vs magma.
 
-For each (gpu, dtype) combination, produces one SVG plot with a subplots grid
+For each (gpu, dtype) combination, produces one SVG with a subplot grid
 (one subplot per batch size). Only includes data where batch >= 4 and N >= 256.
-X-axis: matrix size (log scale)
-Y-axis: time in microseconds (log scale)
-Lines: custom (solid), magma (dashed), cusolver (dot-dashed)
+
+Naming convention:
+  - "custom"   = cusolver column from GPU_new_dtype.txt  (solid line)
+  - "cusolver" = cusolver column from GPU_old_dtype.txt  (dashed line)
+  - "magma"    = average of magma columns from both files (dot-dashed line)
+
+Each cusolver/magma point is annotated with slowdown vs custom (e.g. ×2.3).
 """
 
 import os
 import re
-import glob
 import math
 from collections import defaultdict
 
@@ -21,50 +24,29 @@ import numpy as np
 BENCHMARK_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(BENCHMARK_DIR, "plots")
 
-# Files to include (post June 6, excluding cuda132 variants)
-INCLUDE_PREFIXES = ["a100", "h100", "gb200", "l40s", "rtx5090"]
-
 MIN_BATCH = 4
 MIN_SIZE = 256
 
 
-def parse_benchmark_file(filepath):
-    """Parse a benchmark .txt file and return structured data.
+def parse_file(filepath):
+    """Parse a benchmark .txt file with 2-column format (magma | cusolver).
 
     Returns:
-        (has_magma, data_by_batch) where data_by_batch is a dict:
-        {batch_size: [(matrix_size, magma_time, cusolver_time, custom_time), ...]}
-        Only includes entries with batch >= MIN_BATCH and matrix_size >= MIN_SIZE.
-        If has_magma is False, magma_time will be None for all entries.
+        dict: {(batch, size): (magma_time, cusolver_time)}
     """
-    data_by_batch = defaultdict(list)
+    data = {}
 
     with open(filepath, "r") as f:
         content = f.read()
 
-    # Detect if file has 3 columns (magma | cusolver | custom) or 2 (cusolver | custom)
-    has_magma = "magma" in content
-
-    if has_magma:
-        pattern = re.compile(
-            r"\(\s*(\d+(?:,\s*\d+)*)\s*\)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)"
-        )
-    else:
-        pattern = re.compile(
-            r"\(\s*(\d+(?:,\s*\d+)*)\s*\)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)"
-        )
+    pattern = re.compile(
+        r"\(\s*(\d+(?:,\s*\d+)*)\s*\)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)"
+    )
 
     for match in pattern.finditer(content):
         dims = [int(x.strip()) for x in match.group(1).split(",")]
-
-        if has_magma:
-            magma = float(match.group(2))
-            cusolver = float(match.group(3))
-            custom = float(match.group(4))
-        else:
-            magma = None
-            cusolver = float(match.group(2))
-            custom = float(match.group(3))
+        magma = float(match.group(2))
+        cusolver = float(match.group(3))
 
         if len(dims) == 2:
             batch_size = 1
@@ -75,31 +57,89 @@ def parse_benchmark_file(filepath):
         else:
             continue
 
-        # Filter: only batch >= 4 and size >= 256
         if batch_size < MIN_BATCH or matrix_size < MIN_SIZE:
             continue
 
-        data_by_batch[batch_size].append((matrix_size, magma, cusolver, custom))
+        data[(batch_size, matrix_size)] = (magma, cusolver)
 
-    # Sort each batch's data by matrix_size
-    for batch in data_by_batch:
-        data_by_batch[batch].sort(key=lambda x: x[0])
-
-    return has_magma, data_by_batch
+    return data
 
 
-def extract_gpu_dtype(filename):
-    """Extract GPU name and dtype from filename like 'h100_float32.txt'."""
-    name = os.path.splitext(filename)[0]
-    for dtype in ["complex128", "complex64", "float64", "float32"]:
-        if name.endswith(dtype):
-            gpu = name[: -(len(dtype) + 1)]  # strip _dtype
-            return gpu, dtype
-    return name, "unknown"
+def discover_pairs():
+    """Auto-discover all (gpu, dtype) pairs that have both _new_ and _old_ files.
+
+    Scans the benchmark directory for files matching GPU_new_DTYPE.txt and
+    finds their GPU_old_DTYPE.txt counterparts.
+
+    Returns:
+        list of (gpu, dtype, new_path, old_path)
+    """
+    pairs = []
+    seen = set()
+
+    pattern = re.compile(r"^(.+)_new_(.+)\.txt$")
+
+    for fname in sorted(os.listdir(BENCHMARK_DIR)):
+        match = pattern.match(fname)
+        if not match:
+            continue
+
+        gpu = match.group(1)
+        dtype = match.group(2)
+
+        if (gpu, dtype) in seen:
+            continue
+
+        new_path = os.path.join(BENCHMARK_DIR, fname)
+        old_path = os.path.join(BENCHMARK_DIR, f"{gpu}_old_{dtype}.txt")
+
+        if os.path.exists(old_path):
+            pairs.append((gpu, dtype, new_path, old_path))
+            seen.add((gpu, dtype))
+
+    return pairs
 
 
-def plot_benchmark(gpu, dtype, has_magma, data_by_batch, output_dir):
-    """Generate one plot per (gpu, dtype) with subplots grid for batch sizes."""
+def build_combined_data(new_data, old_data):
+    """Combine new and old benchmark data.
+
+    Returns:
+        dict: {batch: [(size, custom_time, cusolver_time, magma_time), ...]}
+        where:
+          custom_time  = cusolver from new file
+          cusolver_time = cusolver from old file
+          magma_time   = average of magma from both files
+    """
+    combined = defaultdict(list)
+
+    # Use keys present in both files
+    common_keys = set(new_data.keys()) & set(old_data.keys())
+
+    for batch, size in sorted(common_keys):
+        magma_new, cusolver_new = new_data[(batch, size)]
+        magma_old, cusolver_old = old_data[(batch, size)]
+
+        custom_time = cusolver_new       # new cusolver = "custom"
+        cusolver_time = cusolver_old     # old cusolver = "cusolver"
+        magma_time = (magma_new + magma_old) / 2.0  # average magma
+
+        combined[batch].append((size, custom_time, cusolver_time, magma_time))
+
+    # Sort by matrix size within each batch
+    for batch in combined:
+        combined[batch].sort(key=lambda x: x[0])
+
+    return combined
+
+
+def plot_comparison(gpu, dtype, data_by_batch, output_dir):
+    """Generate one SVG plot per (gpu, dtype) with subplots for each batch size.
+
+    Each subplot has a line plot on top and a small table below showing the
+    slowdown of cusolver and magma relative to custom.
+    """
+    import matplotlib.gridspec as gridspec
+
     os.makedirs(output_dir, exist_ok=True)
 
     batch_sizes = sorted(data_by_batch.keys())
@@ -108,65 +148,121 @@ def plot_benchmark(gpu, dtype, has_magma, data_by_batch, output_dir):
     if n_batches == 0:
         return
 
-    # Determine grid layout
     ncols = min(3, n_batches)
     nrows = math.ceil(n_batches / ncols)
 
-    fig, axes = plt.subplots(nrows, ncols, figsize=(6 * ncols, 5 * nrows),
-                             squeeze=False, sharex=True, sharey=True)
+    # Each batch gets a plot area (height 4) + table area (height 1)
+    fig = plt.figure(figsize=(7 * ncols, 6 * nrows))
+    outer_gs = gridspec.GridSpec(
+        nrows, ncols, figure=fig,
+        hspace=0.45, wspace=0.3,
+    )
+
+    color_custom = "#2196F3"
+    color_cusolver = "#FF8C00"   # light orange
+    color_magma = "#66BB6A"      # light green
 
     for idx, batch_size in enumerate(batch_sizes):
-        row = idx // ncols
-        col = idx % ncols
-        ax = axes[row][col]
+        row_idx = idx // ncols
+        col_idx = idx % ncols
+
+        # Split each cell into plot (top, 75%) and table (bottom, 25%)
+        inner_gs = gridspec.GridSpecFromSubplotSpec(
+            2, 1, subplot_spec=outer_gs[row_idx, col_idx],
+            height_ratios=[4, 1], hspace=0.05,
+        )
+
+        ax = fig.add_subplot(inner_gs[0])
+        ax_table = fig.add_subplot(inner_gs[1])
 
         rows = data_by_batch[batch_size]
-        matrix_sizes = [r[0] for r in rows]
+        sizes = [r[0] for r in rows]
+        custom_times = [r[1] for r in rows]
         cusolver_times = [r[2] for r in rows]
-        custom_times = [r[3] for r in rows]
+        magma_times = [r[3] for r in rows]
 
-        ax.plot(matrix_sizes, custom_times, "-o", label="custom",
-                linewidth=2, markersize=4)
-        if has_magma:
-            magma_times = [r[1] for r in rows]
-            ax.plot(matrix_sizes, magma_times, "--s", label="magma",
-                    linewidth=2, markersize=4)
-        ax.plot(matrix_sizes, cusolver_times, "-.^", label="cusolver",
-                linewidth=2, markersize=4)
+        # --- Line plot ---
+        ax.plot(sizes, custom_times, "-o", label="custom",
+                linewidth=2, markersize=5, color=color_custom)
+        ax.plot(sizes, cusolver_times, "--s", label="cusolver",
+                linewidth=2, markersize=5, color=color_cusolver)
+        ax.plot(sizes, magma_times, "-.^", label="magma",
+                linewidth=2, markersize=5, color=color_magma)
 
         ax.set_xscale("log", base=2)
         ax.set_yscale("log")
-        ax.set_title(f"batch = {batch_size}", fontsize=11)
+        ax.set_title(f"batch = {batch_size}", fontsize=12, fontweight="bold")
         ax.grid(True, alpha=0.3, which="both")
 
-        ax.set_xticks(matrix_sizes)
-        ax.set_xticklabels([str(s) for s in matrix_sizes], rotation=45,
-                           ha="right", fontsize=8)
+        ax.set_xticks(sizes)
+        ax.set_xticklabels([])  # hide x labels on plot (table has them)
 
-        if col == 0:
-            ax.set_ylabel("Time (μs, log scale)", fontsize=10)
-        if row == nrows - 1:
-            ax.set_xlabel("Matrix size N×N (log scale)", fontsize=10)
+        if col_idx == 0:
+            ax.set_ylabel("Time (ms, log scale)", fontsize=10)
 
-        # Only show legend in first subplot
         if idx == 0:
-            ax.legend(fontsize=9)
+            ax.legend(fontsize=9, loc="upper left")
 
-    # Hide unused subplots
-    for idx in range(n_batches, nrows * ncols):
-        row = idx // ncols
-        col = idx % ncols
-        axes[row][col].set_visible(False)
+        # --- Slowdown table ---
+        ax_table.axis("off")
+
+        # Build table data
+        col_labels = [str(s) for s in sizes]
+        cs_slowdowns = [
+            f"×{cusolver_times[i] / custom_times[i]:.1f}"
+            for i in range(len(sizes))
+        ]
+        mg_slowdowns = [
+            f"×{magma_times[i] / custom_times[i]:.1f}"
+            for i in range(len(sizes))
+        ]
+
+        table_data = [cs_slowdowns, mg_slowdowns]
+        row_labels = ["cusolver", "magma"]
+
+        table = ax_table.table(
+            cellText=table_data,
+            rowLabels=row_labels,
+            colLabels=col_labels,
+            cellLoc="center",
+            rowLoc="center",
+            loc="center",
+        )
+        table.auto_set_font_size(False)
+        table.set_fontsize(7)
+        table.scale(1.0, 1.2)
+
+        # Style the table
+        for (r, c), cell in table.get_celld().items():
+            cell.set_edgecolor("#CCCCCC")
+            cell.set_linewidth(0.5)
+            if r == 0:
+                # Column headers (sizes)
+                cell.set_facecolor("#E0E0E0")
+                cell.set_text_props(fontweight="bold", fontsize=7)
+            elif c == -1:
+                # Row labels
+                if r == 1:
+                    cell.set_facecolor("#FFE0B2")  # cusolver row
+                else:
+                    cell.set_facecolor("#C8E6C9")  # magma row
+                cell.set_text_props(fontweight="bold", fontsize=7)
+            else:
+                # Data cells
+                if r == 1:
+                    cell.set_facecolor("#FFF3E0")  # light orange tint
+                else:
+                    cell.set_facecolor("#E8F5E9")  # light green tint
 
     fig.suptitle(
-        f"LU Factorization — {gpu.upper()} / {dtype}",
-        fontsize=14, fontweight="bold",
+        f"LU Factorization — {gpu.upper()} / {dtype}\n"
+        f"custom = new cuSOLVER batched, cusolver = old cuSOLVER, magma = MAGMA (avg)",
+        fontsize=13, fontweight="bold",
     )
-    plt.tight_layout()
 
     fname = f"{gpu}_{dtype}.svg"
     outpath = os.path.join(output_dir, fname)
-    fig.savefig(outpath, format="svg")
+    fig.savefig(outpath, format="svg", bbox_inches="tight")
     plt.close(fig)
     print(f"  Saved: {outpath}")
 
@@ -174,27 +270,21 @@ def plot_benchmark(gpu, dtype, has_magma, data_by_batch, output_dir):
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    files = sorted(glob.glob(os.path.join(BENCHMARK_DIR, "*.txt")))
-    files = [
-        f
-        for f in files
-        if any(os.path.basename(f).startswith(p) for p in INCLUDE_PREFIXES)
-        and "cuda132" not in os.path.basename(f)
-    ]
+    pairs = discover_pairs()
+    print(f"Found {len(pairs)} (GPU, dtype) pairs to plot.\n")
 
-    print(f"Processing {len(files)} benchmark files...\n")
+    for gpu, dtype, new_path, old_path in pairs:
+        print(f"[{gpu.upper()} / {dtype}]")
 
-    for filepath in files:
-        filename = os.path.basename(filepath)
-        gpu, dtype = extract_gpu_dtype(filename)
-        print(f"[{gpu} / {dtype}]")
+        new_data = parse_file(new_path)
+        old_data = parse_file(old_path)
 
-        has_magma, data_by_batch = parse_benchmark_file(filepath)
-        if not data_by_batch:
-            print("  No data found, skipping.")
+        if not new_data or not old_data:
+            print("  Insufficient data, skipping.")
             continue
 
-        plot_benchmark(gpu, dtype, has_magma, data_by_batch, OUTPUT_DIR)
+        data_by_batch = build_combined_data(new_data, old_data)
+        plot_comparison(gpu, dtype, data_by_batch, OUTPUT_DIR)
         print()
 
     print(f"Done. Plots saved to: {OUTPUT_DIR}")
