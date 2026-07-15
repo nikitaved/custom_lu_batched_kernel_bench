@@ -31,13 +31,27 @@ MIN_SIZE = 256
 def parse_file(filepath):
     """Parse a benchmark .txt file with 2-column format (magma | cusolver).
 
+    Detects the time unit from "Times are in ..." line and normalizes to ms.
+
     Returns:
-        dict: {(batch, size): (magma_time, cusolver_time)}
+        dict: {(batch, size): (magma_time_ms, cusolver_time_ms)}
     """
     data = {}
 
     with open(filepath, "r") as f:
         content = f.read()
+
+    # Detect time unit and compute conversion factor to milliseconds
+    scale = 1.0  # default: assume ms
+    unit_match = re.search(r"Times are in (\w+)", content)
+    if unit_match:
+        unit = unit_match.group(1).lower()
+        if unit == "microseconds":
+            scale = 1e-3
+        elif unit == "milliseconds":
+            scale = 1.0
+        elif unit == "seconds":
+            scale = 1e3
 
     pattern = re.compile(
         r"\(\s*(\d+(?:,\s*\d+)*)\s*\)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)"
@@ -45,8 +59,8 @@ def parse_file(filepath):
 
     for match in pattern.finditer(content):
         dims = [int(x.strip()) for x in match.group(1).split(",")]
-        magma = float(match.group(2))
-        cusolver = float(match.group(3))
+        magma = float(match.group(2)) * scale
+        cusolver = float(match.group(3)) * scale
 
         if len(dims) == 2:
             batch_size = 1

@@ -1,5 +1,5 @@
-[W703 07:47:41.333712508 Context.cpp:500] Warning: torch.backends.cuda.preferred_linalg_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
-[W703 07:47:41.333742621 Context.cpp:478] Warning: The usage of MAGMA backend for linear algebra operations is deprecated and will be removed in future releases. cuSOLVER stays as the default backend.If you see any error messages with cuSOLVER but not MAGMA, please, file an issue on GitHub. (function operator())
+[W714 04:20:30.208043466 Context.cpp:508] Warning: torch.backends.cuda.preferred_linalg_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
+[W714 04:20:30.208072238 Context.cpp:486] Warning: The usage of MAGMA backend for linear algebra operations is deprecated and will be removed in future releases. cuSOLVER stays as the default backend.If you see any error messages with cuSOLVER but not MAGMA, please, file an issue on GitHub. (function operator())
 =========================================================================================
    WARNING batched routines are designed for small sizes. It might be better to use the
    Native/Hybrid classical routines if you want good performance.
@@ -475,55 +475,84 @@ Testing shape=(64, 4096, 4096)
 Testing shape=(64, 6144, 6144)
 Skipping shape=(64, 8192, 8192) (would need 32.0 GiB, GPU has 79 GiB)
 Testing shape=(256, 256, 256)
+Testing shape=(256, 384, 384)
 Testing shape=(256, 512, 512)
+Testing shape=(256, 768, 768)
+Testing shape=(256, 1024, 1024)
 Testing shape=(1024, 256, 256)
+Testing shape=(1024, 384, 384)
 Testing shape=(1024, 512, 512)
+Testing shape=(1024, 768, 768)
+Testing shape=(1024, 1024, 1024)
 Testing shape=(4096, 256, 256)
+Testing shape=(4096, 384, 384)
 Testing shape=(4096, 512, 512)
-[---------- lu_factor (complex64) -----------]
-                        |  magma   |  cusolver
-1 threads: -----------------------------------
-      (4, 256, 256)     |     1.8  |      1.5 
-      (4, 384, 384)     |     2.9  |      2.5 
-      (4, 512, 512)     |     5.4  |      3.5 
-      (4, 768, 768)     |    10.9  |      5.7 
-      (4, 1024, 1024)   |    16.6  |      8.0 
-      (4, 1536, 1536)   |    32.4  |     13.5 
-      (4, 2048, 2048)   |    50.2  |     20.0 
-      (4, 3072, 3072)   |    92.8  |     36.8 
-      (4, 4096, 4096)   |   146.2  |     60.3 
-      (4, 6144, 6144)   |   293.4  |    131.5 
-      (4, 8192, 8192)   |   505.1  |    248.6 
-      (16, 256, 256)    |     2.2  |      1.6 
-      (16, 384, 384)    |     3.8  |      2.6 
-      (16, 512, 512)    |     7.2  |      3.9 
-      (16, 768, 768)    |    14.7  |      6.5 
-      (16, 1024, 1024)  |    23.1  |      9.5 
-      (16, 1536, 1536)  |    48.4  |     17.9 
-      (16, 2048, 2048)  |    79.2  |     29.6 
-      (16, 3072, 3072)  |   160.7  |     65.9 
-      (16, 4096, 4096)  |   275.3  |    124.4 
-      (16, 6144, 6144)  |   643.4  |    329.7 
-      (16, 8192, 8192)  |  1227.0  |    702.2 
-      (64, 256, 256)    |     2.5  |      1.8 
-      (64, 384, 384)    |     4.5  |      3.3 
-      (64, 512, 512)    |     8.6  |      5.0 
-      (64, 768, 768)    |    18.5  |      9.4 
-      (64, 1024, 1024)  |    31.1  |     15.8 
-      (64, 1536, 1536)  |    76.0  |     35.9 
-      (64, 2048, 2048)  |   130.8  |     67.9 
-      (64, 3072, 3072)  |   318.0  |    181.1 
-      (64, 4096, 4096)  |   633.6  |    377.0 
-      (64, 6144, 6144)  |  1817.5  |   1149.3 
-      (256, 256, 256)   |     4.3  |      2.8 
-      (256, 512, 512)   |    18.2  |      9.5 
-      (1024, 256, 256)  |    10.7  |      7.1 
-      (1024, 512, 512)  |    51.7  |     28.4 
-      (4096, 256, 256)  |    34.4  |     24.5 
-      (4096, 512, 512)  |   185.8  |    103.9 
+Testing shape=(4096, 768, 768)
+Skipping shape=(4096, 1024, 1024) (would need 32.0 GiB, GPU has 79 GiB)
+[------------- lu_factor (complex64) --------------]
+                          |    magma    |   cusolver
+1 threads: -----------------------------------------
+      (4, 256, 256)       |     1322.5  |      768.6
+      (4, 384, 384)       |     2204.9  |     1237.9
+      (4, 512, 512)       |     3151.1  |     1988.4
+      (4, 768, 768)       |     5724.8  |     3405.9
+      (4, 1024, 1024)     |     8948.6  |     5141.5
+      (4, 1536, 1536)     |    24403.6  |    10299.9
+      (4, 2048, 2048)     |    41691.5  |    16433.9
+      (4, 3072, 3072)     |    82970.5  |    32750.8
+      (4, 4096, 4096)     |   134246.0  |    55711.6
+      (4, 6144, 6144)     |   275423.4  |   125935.3
+      (4, 8192, 8192)     |   479596.2  |   241799.1
+      (16, 256, 256)      |     1661.2  |      796.4
+      (16, 384, 384)      |     2926.4  |     1337.0
+      (16, 512, 512)      |     4368.6  |     2229.8
+      (16, 768, 768)      |     8370.6  |     4131.9
+      (16, 1024, 1024)    |    13595.3  |     6613.2
+      (16, 1536, 1536)    |    38485.5  |    14627.2
+      (16, 2048, 2048)    |    68804.5  |    25950.9
+      (16, 3072, 3072)    |   149539.4  |    61395.8
+      (16, 4096, 4096)    |   261148.0  |   119796.6
+      (16, 6144, 6144)    |   630784.1  |   322913.0
+      (16, 8192, 8192)    |  1181051.2  |   692308.2
+      (64, 256, 256)      |     2110.7  |      945.8
+      (64, 384, 384)      |     4118.1  |     1870.1
+      (64, 512, 512)      |     6687.1  |     3137.2
+      (64, 768, 768)      |    14101.4  |     6893.7
+      (64, 1024, 1024)    |    24792.8  |    12613.9
+      (64, 1536, 1536)    |    72433.5  |    32541.0
+      (64, 2048, 2048)    |   136943.5  |    64537.8
+      (64, 3072, 3072)    |   341330.1  |   177713.2
+      (64, 4096, 4096)    |   668574.3  |   373618.0
+      (64, 6144, 6144)    |  1837195.2  |  1144729.6
+      (256, 256, 256)     |     3447.5  |     1884.8
+      (256, 384, 384)     |     8500.4  |     4473.5
+      (256, 512, 512)     |    14899.6  |     7910.8
+      (256, 768, 768)     |    34655.5  |    19490.1
+      (256, 1024, 1024)   |    66423.7  |    38455.3
+      (1024, 256, 256)    |     9607.3  |     5820.4
+      (1024, 384, 384)    |    25975.5  |    14943.7
+      (1024, 512, 512)    |    51143.8  |    26665.0
+      (1024, 768, 768)    |   117790.0  |    70100.9
+      (1024, 1024, 1024)  |   229553.5  |   142812.8
+      (4096, 256, 256)    |    35462.2  |    20838.1
+      (4096, 384, 384)    |    95755.3  |    55562.8
+      (4096, 512, 512)    |   185274.5  |    99921.6
+      (4096, 768, 768)    |   463828.8  |   270159.7
 
-Times are in milliseconds (ms).
+Times are in microseconds (us).
 
 signed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
+   Native/Hybrid classical routines if you want good performance.
+=========================================================================================
+=========================================================================================
+   WARNING batched routines are designed for small sizes. It might be better to use the
    Native/Hybrid classical routines if you want good performance.
 =========================================================================================

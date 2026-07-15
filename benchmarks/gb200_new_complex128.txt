@@ -1,5 +1,5 @@
-[W706 05:25:41.968846346 Context.cpp:500] Warning: torch.backends.cuda.preferred_linalg_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
-[W706 05:25:41.968911146 Context.cpp:478] Warning: The usage of MAGMA backend for linear algebra operations is deprecated and will be removed in future releases. cuSOLVER stays as the default backend.If you see any error messages with cuSOLVER but not MAGMA, please, file an issue on GitHub. (function operator())
+[W713 08:49:05.140319565 Context.cpp:508] Warning: torch.backends.cuda.preferred_linalg_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
+[W713 08:49:05.140382349 Context.cpp:486] Warning: The usage of MAGMA backend for linear algebra operations is deprecated and will be removed in future releases. cuSOLVER stays as the default backend.If you see any error messages with cuSOLVER but not MAGMA, please, file an issue on GitHub. (function operator())
 =========================================================================================
    WARNING batched routines are designed for small sizes. It might be better to use the
    Native/Hybrid classical routines if you want good performance.
@@ -441,56 +441,7 @@
    Native/Hybrid classical routines if you want good performance.
 =========================================================================================
 =========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routineTesting shape=(4, 256, 256)
+   WARNING batched routines are deTesting shape=(4, 256, 256)
 Testing shape=(4, 384, 384)
 Testing shape=(4, 512, 512)
 Testing shape=(4, 768, 768)
@@ -522,69 +473,75 @@ Testing shape=(64, 2048, 2048)
 Testing shape=(64, 3072, 3072)
 Testing shape=(64, 4096, 4096)
 Testing shape=(64, 6144, 6144)
-Skipping shape=(64, 8192, 8192) (would need 64.0 GiB, GPU has 184 GiB)
+Skipping shape=(64, 8192, 8192) (would need 64.0 GiB, GPU has 187 GiB)
 Testing shape=(256, 256, 256)
+Testing shape=(256, 384, 384)
 Testing shape=(256, 512, 512)
+Testing shape=(256, 768, 768)
+Testing shape=(256, 1024, 1024)
 Testing shape=(1024, 256, 256)
+Testing shape=(1024, 384, 384)
 Testing shape=(1024, 512, 512)
+Testing shape=(1024, 768, 768)
+Testing shape=(1024, 1024, 1024)
 Testing shape=(4096, 256, 256)
+Testing shape=(4096, 384, 384)
 Testing shape=(4096, 512, 512)
-[---------- lu_factor (complex128) ----------]
-                        |  magma   |  cusolver
-1 threads: -----------------------------------
-      (4, 256, 256)     |     1.5  |      1.5 
-      (4, 384, 384)     |     3.4  |      2.5 
-      (4, 512, 512)     |     5.4  |      3.6 
-      (4, 768, 768)     |     9.5  |      5.8 
-      (4, 1024, 1024)   |    13.8  |      8.3 
-      (4, 1536, 1536)   |    24.0  |     14.1 
-      (4, 2048, 2048)   |    35.4  |     21.2 
-      (4, 3072, 3072)   |    63.0  |     40.5 
-      (4, 4096, 4096)   |    98.4  |     67.9 
-      (4, 6144, 6144)   |   202.3  |    154.2 
-      (4, 8192, 8192)   |   364.0  |    296.0 
-      (16, 256, 256)    |     1.6  |      1.6 
-      (16, 384, 384)    |     3.7  |      2.6 
-      (16, 512, 512)    |     5.9  |      4.0 
-      (16, 768, 768)    |    10.8  |      6.8 
-      (16, 1024, 1024)  |    16.5  |     10.0 
-      (16, 1536, 1536)  |    31.0  |     18.9 
-      (16, 2048, 2048)  |    50.1  |     31.7 
-      (16, 3072, 3072)  |   104.7  |     72.7 
-      (16, 4096, 4096)  |   188.1  |    140.3 
-      (16, 6144, 6144)  |   471.3  |    381.7 
-      (16, 8192, 8192)  |   964.9  |    814.3 
-      (64, 256, 256)    |     1.8  |      1.7 
-      (64, 384, 384)    |     4.3  |      3.2 
-      (64, 512, 512)    |     7.2  |      5.0 
-      (64, 768, 768)    |    14.4  |      9.6 
-      (64, 1024, 1024)  |    24.0  |     16.2 
-      (64, 1536, 1536)  |    53.7  |     37.6 
-      (64, 2048, 2048)  |    98.5  |     72.4 
-      (64, 3072, 3072)  |   251.5  |    198.2 
-      (64, 4096, 4096)  |   514.1  |    422.4 
-      (64, 6144, 6144)  |  1495.4  |   1279.5 
-      (256, 256, 256)   |     2.7  |      2.7 
-      (256, 512, 512)   |    12.1  |      9.3 
-      (1024, 256, 256)  |     7.1  |      7.1 
-      (1024, 512, 512)  |    34.3  |     28.7 
-      (4096, 256, 256)  |    24.0  |     24.8 
-      (4096, 512, 512)  |   125.7  |    105.9 
+Testing shape=(4096, 768, 768)
+Skipping shape=(4096, 1024, 1024) (would need 64.0 GiB, GPU has 187 GiB)
+[----------- lu_factor (complex128) -----------]
+                          |  magma   |  cusolver
+1 threads: -------------------------------------
+      (4, 256, 256)       |     1.7  |      1.3 
+      (4, 384, 384)       |     2.8  |      2.2 
+      (4, 512, 512)       |     4.4  |      3.6 
+      (4, 768, 768)       |     7.7  |      6.4 
+      (4, 1024, 1024)     |    12.0  |      9.9 
+      (4, 1536, 1536)     |    25.2  |     18.1 
+      (4, 2048, 2048)     |    40.3  |     28.4 
+      (4, 3072, 3072)     |    77.9  |     57.3 
+      (4, 4096, 4096)     |   128.4  |     99.6 
+      (4, 6144, 6144)     |   280.8  |    236.6 
+      (4, 8192, 8192)     |   525.6  |    467.2 
+      (16, 256, 256)      |     1.8  |      1.3 
+      (16, 384, 384)      |     3.1  |      2.4 
+      (16, 512, 512)      |     4.9  |      3.9 
+      (16, 768, 768)      |     9.2  |      7.6 
+      (16, 1024, 1024)    |    15.1  |     12.3 
+      (16, 1536, 1536)    |    34.5  |     25.4 
+      (16, 2048, 2048)    |    60.5  |     44.6 
+      (16, 3072, 3072)    |   138.6  |    107.8 
+      (16, 4096, 4096)    |   262.6  |    214.7 
+      (16, 6144, 6144)    |   701.6  |    608.4 
+      (16, 8192, 8192)    |  1484.7  |   1326.3 
+      (64, 256, 256)      |     2.0  |      1.6 
+      (64, 384, 384)      |     3.8  |      3.1 
+      (64, 512, 512)      |     6.5  |      5.3 
+      (64, 768, 768)      |    14.0  |     11.7 
+      (64, 1024, 1024)    |    25.7  |     21.6 
+      (64, 1536, 1536)    |    67.0  |     53.8 
+      (64, 2048, 2048)    |   131.6  |    108.1 
+      (64, 3072, 3072)    |   361.3  |    308.8 
+      (64, 4096, 4096)    |   767.3  |    672.9 
+      (64, 6144, 6144)    |  2324.1  |   2090.4 
+      (256, 256, 256)     |     3.4  |      2.9 
+      (256, 384, 384)     |     7.5  |      6.7 
+      (256, 512, 512)     |    13.7  |     12.4 
+      (256, 768, 768)     |    34.4  |     31.3 
+      (256, 1024, 1024)   |    69.3  |     63.2 
+      (1024, 256, 256)    |     9.9  |      8.9 
+      (1024, 384, 384)    |    23.3  |     22.5 
+      (1024, 512, 512)    |    44.5  |     43.0 
+      (1024, 768, 768)    |   119.5  |    115.2 
+      (1024, 1024, 1024)  |   249.4  |    237.4 
+      (4096, 256, 256)    |    34.9  |     31.9 
+      (4096, 384, 384)    |    85.6  |     83.7 
+      (4096, 512, 512)    |   165.9  |    161.5 
+      (4096, 768, 768)    |   458.0  |    442.2 
 
 Times are in milliseconds (ms).
 
-s if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
-   Native/Hybrid classical routines if you want good performance.
-=========================================================================================
-=========================================================================================
-   WARNING batched routines are designed for small sizes. It might be better to use the
+signed for small sizes. It might be better to use the
    Native/Hybrid classical routines if you want good performance.
 =========================================================================================
 =========================================================================================
